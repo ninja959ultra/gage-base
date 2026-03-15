@@ -1,24 +1,24 @@
 # gage-base
 
 ```
-int inp1 = 35;
-int inp2 = 34;
-int inp3 = 37;
-int inp4 = 36;
-int inp5 = 31;
-int inp6 = 30;
-int inp7 = 33;
-int inp8 = 32;
+int inp1 = 52;
+int inp2 = 53;
+int inp3 = 50;
+int inp4 = 51;
+int inp5 = 30;
+int inp6 = 31;
+int inp7 = 32;
+int inp8 = 33;
 int enb1 = 2;
 int enb2 = 3;
 int enb3 = 4;
 int enb4 = 5;
-int stby1 = 28;
-int stby2 = 29;
+int stby1 = 48;
+int stby2 = 22;
 
 
-int trig = 47;
-int echo = 45;
+int trig = 46;
+int echo = 47;
 int destince;
 int right_destince;
 int left_destince;
@@ -78,10 +78,10 @@ void moveBackward() {
 void turnLeft() {
     digitalWrite(inp1, HIGH);
     digitalWrite(inp2, LOW);
-    digitalWrite(inp3, LOW);
-    digitalWrite(inp4, HIGH);
-    digitalWrite(inp5, LOW);
-    digitalWrite(inp6, HIGH);
+    digitalWrite(inp3, HIGH);
+    digitalWrite(inp4, LOW);
+    digitalWrite(inp5, HIGH);
+    digitalWrite(inp6, LOW);
     digitalWrite(inp7, LOW);
     digitalWrite(inp8, HIGH);
 
@@ -94,10 +94,10 @@ void turnLeft() {
 void turnRight() {
     digitalWrite(inp1, LOW);
     digitalWrite(inp2, HIGH);
-    digitalWrite(inp3, HIGH);
-    digitalWrite(inp4, LOW);
-    digitalWrite(inp5, HIGH);
-    digitalWrite(inp6, LOW);
+    digitalWrite(inp3, LOW);
+    digitalWrite(inp4, HIGH);
+    digitalWrite(inp5, LOW);
+    digitalWrite(inp6, HIGH);
     digitalWrite(inp7, HIGH);
     digitalWrite(inp8, LOW);
 
