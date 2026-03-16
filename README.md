@@ -1,5 +1,3 @@
-# gage-base
-
 ```
 int inp1 = 52;
 int inp2 = 53;
@@ -24,9 +22,16 @@ int right_destince;
 int left_destince;
 unsigned long travelTime;
 
+unsigned long eventsTimes[100];
+char movesTypes[100];
+
 
 void setup() {
-    for (byte i=28; i<38; i++) {
+    for (byte i=50; i<54; i++) {
+        pinMode(i, OUTPUT);
+    }
+
+    for (byte i=30; i<34; i++) {
         pinMode(i, OUTPUT);
     }
 
@@ -37,6 +42,8 @@ void setup() {
     pinMode(trig, OUTPUT);
     pinMode(echo, INPUT);
 
+    pinMode(stby1, OUTPUT);
+    pinMode(stby2, OUTPUT);
     digitalWrite(stby1, HIGH);
     digitalWrite(stby2, HIGH);
 
@@ -129,11 +136,11 @@ void loop() {
 
   if (destince<20) {
     moveBackward();
-    delay(500);
+    delay(800);
     stop();
 
     turnRight();
-    delay(800);
+    delay(1000);
     stop();
     
     digitalWrite(trig, HIGH);
@@ -153,9 +160,7 @@ void loop() {
     left_destince = (travelTime / 2) * 0.0343;
 
     if (right_destince > left_destince) {
-      turnRight();
-      delay(1700);
-      stop();
+      
     }
 
     else if (left_destince == right_destince) {
